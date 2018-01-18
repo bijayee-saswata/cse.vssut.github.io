@@ -24,40 +24,6 @@ signinRef.on('value',function(datasnapshot){
 
 
 
-firebase.auth().onAuthStateChanged(function (user) {
-  // body...
-
-  if (user){
-      $("#loginid").hide();
-    $("#loginpage1").hide();
-   // var email = user.email;
-    //email.innerText=datasnapshot.val();
-    $("#username").show();
-    if(user.email ==true){
-      document.getElementById('userid').innerHTML = user.displayName;
-    }
-     else
-     {
-      document.getElementById('userid').innerHTML = user.email;
-     }
-     $("#loginpage2").show();
-     $("#gbtn").hide();
-     
-
-  }
-  else{
-    // alert("not login");
-      $("#loginid").show();
-     $("#loginpage1").show();
-     // $("#username").hide();
-      $("#loginpage2").hide();
-      $("#gbtn").show();
-      $("#fbbtn").show();
-      $("#loginid1").show();
-
-  }
-   
-});
 
 /*  login process  */
 
@@ -158,3 +124,44 @@ $("#signout").click(
 });
 
   });
+
+// Check browser support
+
+
+
+firebase.auth().onAuthStateChanged(function (user) {
+  // body...
+
+  if (user){
+      $("#loginid").hide();
+    $("#loginpage1").hide();
+   // var email = user.email;
+    //email.innerText=datasnapshot.val();
+    $("#username").show();
+    
+      //document.getElementById('userid').innerHTML = user.email;
+      if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastemail", user.email);
+    // Retrieve
+    document.getElementById("userid").innerHTML = localStorage.getItem("lastemail");
+} else {
+    document.getElementById("userid").innerHTML = "web Storage not supported...";
+}
+     
+     $("#loginpage2").show();
+     
+     
+
+  }
+  else{
+    // alert("not login");
+      $("#loginid").show();
+     $("#loginpage1").show();
+      $("#username").hide();
+      $("#loginpage2").hide();
+      $("#loginid1").show();
+
+  }
+   
+});
