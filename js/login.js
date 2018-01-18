@@ -33,7 +33,13 @@ firebase.auth().onAuthStateChanged(function (user) {
    // var email = user.email;
     //email.innerText=datasnapshot.val();
     $("#username").show();
-     document.getElementById('userid').innerHTML = user.displayName;
+    if(user.email =""){
+      document.getElementById('userid').innerHTML = user.displayName;
+    }
+     else
+     {
+      document.getElementById('userid').innerHTML = user.email;
+     }
      $("#loginpage2").show();
      $("#gbtn").hide();
      
@@ -59,6 +65,7 @@ $("#btn-login").click(
   function(){
     var email=$("#login-email").val();
     var password=$("#login-password").val();
+   
     
     if(email !="" && password !=""){
 
@@ -85,10 +92,14 @@ $("#btn-login").click(
 
 btnsignup.addEventListener('click', e=> {
 
-  const email=loginemail.value;
-  const password=loginpassword.value;
+  const email=login_email.value;
+  const password=login_password.value;
+    $("#signupProgress").show();
+    $("#btnsignup").hide();
   const promise =firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
     $("#loginError1").show().text(error.message);
+    $("#signupProgress").hide();
+    $("#btnsignup").show();
   });
  
 });
