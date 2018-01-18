@@ -102,17 +102,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 
 
 /*  logout process  */
-$("#signout").click(
-  function(){
 
-    firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}).catch(function(error) {
-  // An error happened.
-  alert(error.message);
-});
-
-  });
 
 
 /* sign up process */ 
@@ -175,3 +165,16 @@ btnsignup.addEventListener('click', e=> {
             // ...
          });
       }
+
+      
+$("#signout").click(
+  function(){
+
+    firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}).catch(function(error) {
+  // An error happened.
+  alert(error.message);
+});
+
+  });
