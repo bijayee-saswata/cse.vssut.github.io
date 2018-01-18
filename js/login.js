@@ -33,7 +33,7 @@ firebase.auth().onAuthStateChanged(function (user) {
    // var email = user.email;
     //email.innerText=datasnapshot.val();
     $("#username").show();
-     document.getElementById('userid').innerHTML = user.email;
+     document.getElementById('userid').innerHTML = user.displayName;
      $("#loginpage2").show();
      $("#gbtn").hide();
      
@@ -50,8 +50,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       $("#loginid1").show();
 
   }
-   //gbtn.user=user;
-  //console.log('user',user);
+   
 });
 
 /*  login process  */
@@ -80,31 +79,6 @@ $("#btn-login").click(
   );
 
 
-/*function signIn(){
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  console.log(user);
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});*/
-
-
-
-/*  logout process  */
-
-
-
 /* sign up process */ 
 
 
@@ -116,35 +90,8 @@ btnsignup.addEventListener('click', e=> {
   const promise =firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
     $("#loginError1").show().text(error.message);
   });
- // promise.then(function(){alert("registred")})
+ 
 });
-
-/*$("#gbtn").click( 
-  function(){
-  var provider = new firebase.auth.GoogleAuthProvider();
-  provider.addScope('profile');
-  provider.addScope('email');
-  firebase.auth().signInWithPopup(provider)
-  .catch(function(error){
-    console.log('google sign in error',error);
-  });
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-});*/
 
 // google login
  function callGoogleSignIn(){
