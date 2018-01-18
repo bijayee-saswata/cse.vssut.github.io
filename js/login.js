@@ -33,7 +33,7 @@ firebase.auth().onAuthStateChanged(function (user) {
    // var email = user.email;
     //email.innerText=datasnapshot.val();
     $("#username").show();
-    if(user.email =""){
+    if(user.email ==true){
       document.getElementById('userid').innerHTML = user.displayName;
     }
      else
