@@ -64,9 +64,9 @@
                 <!--<li><a href="#"><i class="icon-instagram2"></i></a></li>-->
                 <li><a href="#"><i class="icon-youtube"></i></a></li>
                 <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-                <li><a href="login.html" id="loginid1" style="margin-left: 30px;">Login</a></li>
-                <li class="dropdown">
-                <a href="#" id="username" data-toggle="dropdown" class="dropdown-toggle" style="margin-left: 30px;display: none;">Hello <span id="userid"></span></a>
+                <li id="loginidi"><a href="login.html" style="margin-left: 30px;">Login</a></li>
+                <li class="dropdown" id="usernamei" style="margin-left: 30px;display: none;">hi
+                <a href="" data-toggle="dropdown" class="dropdown-toggle" style="">Hello <script>document.innerHTML=localStorage.getItem("lastemail");</script></a>
                     <ul class="dropdown-menu">
                       <li><a href="" id="signout"> Sign Out </a></li>
                     </ul>
@@ -744,22 +744,12 @@
 
 
       <!---->
+      <script src="js/login.js"></script>
     <script src="js/app.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="js/login.js"></script>
-    <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC_bTOzY0vp7AjQRtdtc_nPfLSlERdWd1Q",
-    authDomain: "cse-vssut.firebaseapp.com",
-    databaseURL: "https://cse-vssut.firebaseio.com",
-    projectId: "cse-vssut",
-    storageBucket: "cse-vssut.appspot.com",
-    messagingSenderId: "2621498768"
-  };
-  firebase.initializeApp(config);
-</script>
+    
+  
   </body>
 </html>

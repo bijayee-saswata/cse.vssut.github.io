@@ -21,6 +21,14 @@
     <![endif]-->
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
+
+<script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key:   [816wt5bk5jklw8]
+    onLoad:    [ONLOAD]
+    authorize: [AUTHORIZE]
+    lang:      [LANG_LOCALE]
+</script>
+
   </head>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <body>
@@ -111,7 +119,6 @@
           </div>
         </div>
       </nav>
-      
       <!--       login section-->
           <div class="container" id="loginpage1" style="display: none;">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
@@ -168,6 +175,7 @@
           </ul>-->
             <input id="gbtn" type="button" onclick="callGoogleSignIn()" value="Google">
             <input id="fbbtn" type="button" onclick="callFacebookSignIn()" value="Facebook">
+            <script type="in/Login"></script>
             </div>
 
                                 <div class="form-group">
@@ -224,25 +232,27 @@
                                     </div>
                                 </div></center>
                                 
-          
-            </div>
-                                
-                                
-                                
                             </form>
+                        </div>
+                                
+                                
+                                
+                            
                          </div>
                     </div>
 
                
                
            </div>     
-         </div> 
-
-      <div class="container" id="loginpage2" style="display: none;">
-        <center><span><h1 style="color: green;margin: 50px;font-weight: bold;">Congratulation....</h1>
+         </div>
+         <center>
+      <div class="row">
+      <div class="col-xs-12" id="loginpage2" style="display: none;">
+        <span><h1 style="color: green;font-weight: bold;">Congratulation....</h1></span>
       </div>
+    </div>
+    </center>
 
-     
       <footer class="probootstrap-footer probootstrap-bg">
         <div class="container">
           <div class="row">
