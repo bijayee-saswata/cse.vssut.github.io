@@ -134,20 +134,16 @@ firebase.auth().onAuthStateChanged(function (user) {
 
   if (user){
       $("#loginid").hide();
+       $("#loginidi").show();
     $("#loginpage1").hide();
    // var email = user.email;
     //email.innerText=datasnapshot.val();
     $("#username").show();
-    
+    $("#usernamei").show();
       //document.getElementById('userid').innerHTML = user.email;
-      if (typeof(Storage) !== "undefined") {
-    // Store
     localStorage.setItem("lastemail", user.email);
     // Retrieve
     document.getElementById("userid").innerHTML = localStorage.getItem("lastemail");
-} else {
-    document.getElementById("userid").innerHTML = "web Storage not supported...";
-}
      
      $("#loginpage2").show();
      
