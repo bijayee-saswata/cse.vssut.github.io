@@ -173,9 +173,10 @@
             <li><a href="" id="fbbtn" class="btn" style="display: none;"><i class="fa fa-facebook"></i> acebook</a></li>
             <li><a href="" id="gbtn" class="btn" style="display: none;"><i  class="fa fa-google" ></i> oogle</a></li>
           </ul>-->
+            <input id="inbtn" type="button" onclick="onLinkedInLoad()" value="linkedIn">
             <input id="gbtn" type="button" onclick="callGoogleSignIn()" value="Google">
             <input id="fbbtn" type="button" onclick="callFacebookSignIn()" value="Facebook">
-            <script type="in/Login"></script>
+            
             </div>
 
                                 <div class="form-group">
@@ -248,7 +249,58 @@
          <center>
       <div class="row">
       <div class="col-xs-12" id="loginpage2" style="display: none;">
-        <span><h1 style="color: green;font-weight: bold;">Congratulation....</h1></span>
+              <section class="probootstrap-section probootstrap-section-colored" style="margin-top: 2%;">
+        <div class="container" style="height: 0px;">
+        </div>s
+      </section>
+
+      <section class="probootstrap-section probootstrap-section-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row probootstrap-gutter0">
+                <div class="col-md-3" id="probootstrap-sidebar">
+                  <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate" >
+                    <img src="img/img_sm_3.jpg" width="100%">
+                    
+                  </div>
+                </div>
+                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                  
+                 
+                 <div class="container-fluid" id="details">
+                  
+                        <div class="panel panel-default text-center">
+                          <div class="panel-heading">
+                            <h1><b>Name</b></h1>
+                            <a href="login.html"><i class="fa fa-pencil-square-o pull-right" style="color: #fff;"> Edit </i></a>
+                          </div>
+                          <div class="panel-body text-left" >
+                            <p><strong>Full Name : </strong> xyz</p>
+                            <p><strong>Branch : </strong> cse</p>
+                            <p><strong>Email : </strong> abc@dgs.com</p>
+                            <p><strong>DOB : </strong> 15:07:2004</p>
+                            <p><strong>Current Position : </strong> IBM </p>
+                            <p><strong>Contact No : </strong> 111111111</p>
+                            <p><strong>Admission Year : </strong> 2015</p>
+                            <p><strong>Pass Out Year : </strong> 2015</p>
+                          </div>
+                          <span>Connect Through...</span>
+                          <div class="panel-footer">
+                            <div class="social-login">
+                            <input id="gbtn" type="button" onclick="callGoogleSignIn()" value="Google">
+                            <input id="fbbtn" type="button" onclick="callFacebookSignIn()" value="Facebook">
+                          </div>
+                          </div>
+                        </div>      
+                      </div>     
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       </div>
     </div>
     </center>
@@ -324,5 +376,8 @@
 
     <!--firebase intigration-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+
+
   </body>
 </html>
